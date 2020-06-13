@@ -20,9 +20,12 @@ data:
         - system:masters
 kind: ConfigMap
 metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"mapRoles":"- rolearn: arn:aws:iam::481028758247:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-1LPPWLWFGI2ZX\n  username: system:node:{{EC2PrivateDNSName}}\n  groups:\n    - system:bootstrappers\n    - system:nodes\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"aws-auth","namespace":"kube-system"}}
   creationTimestamp: "2020-06-12T22:40:53Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "86717"
+  resourceVersion: "87382"
   selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
   uid: 2560c0c8-5280-4a3f-8169-97a3df3f1f72
