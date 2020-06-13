@@ -5,8 +5,9 @@ metadata:
   namespace: kube-system
 data:
   mapRoles: |
-    - rolearn: arn:aws:iam::481028758247:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-1902TB3Y1JWO4
+    - rolearn: arn:aws:iam::776127788702:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-CKKC0VNGBROE
       username: system:node:{{EC2PrivateDNSName}}
       groups:
         - system:bootstrappers
         - system:nodes
+        - system:masters
