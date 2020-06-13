@@ -14,6 +14,7 @@ phases:
         - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' simple-jwt-api.yml
         - sed -i 's@JWT_SECRET_VALUE@'"$JWT_SECRET"'@' simple-jwt-api.yml
         - $(aws ecr get-login --no-include-email)
+        - aws eks --region us-east-1 update-kubeconfig --name simple-jwt-api
         - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
