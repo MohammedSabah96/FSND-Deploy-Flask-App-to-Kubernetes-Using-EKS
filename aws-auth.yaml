@@ -10,4 +10,8 @@ data:
       groups:
         - system:bootstrappers
         - system:nodes
+  mapUsers: |
+    - userarn: arn:aws:iam::776127788702:user/evo
+      username: evo
+      groups:
         - system:masters
