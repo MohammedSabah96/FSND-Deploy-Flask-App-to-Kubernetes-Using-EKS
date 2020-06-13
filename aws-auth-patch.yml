@@ -14,15 +14,15 @@ data:
         - system:nodes
         - system:masters
   mapUsers: |
-    []
+    - userarn: arn:aws:iam::776127788702:user/evo
+      username: evo
+      groups:
+        - system:masters
 kind: ConfigMap
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","data":{"mapRoles":"- rolearn: arn:aws:iam::776127788702:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-CKKC0VNGBROE\n  username: system:node:{{EC2PrivateDNSName}}\n  groups:\n    - system:bootstrappers\n    - system:nodes\n    - system:masters\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"aws-auth","namespace":"kube-system"}}
   creationTimestamp: "2020-06-13T20:34:11Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "29048"
+  resourceVersion: "38385"
   selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
   uid: cc9ea8f3-5938-4aa7-98b5-dad0564e5dd0
